@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Peau
+{% endblock %}
+
+{% block body %}
+<div class="row">
+	<div class="col-8 mx-auto">
+		<h1 class="display-4 my-5 text-center">TYPE PEAU</h1>
+
+		{{ form_start(formPeau) }}
+		{{ form_row(formPeau.type) }}
+		
+
+		<button type="submit" class="btn btn-outline-primary w-100">Enregistrer</button>
+
+		{{ form_end(formPeau) }}
+	</div>
+</div>
+{% endblock %}

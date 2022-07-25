@@ -1,0 +1,67 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Detail des utilisateurs
+{{ app.user.nom ~' '~ app.user.prenom }}
+
+
+{% endblock %}
+
+
+{% block content %}
+	<div class="row">
+		<div class="col-6 mx-auto">
+			<h1 class="display-4 my-5 text-center">Informations de {{user.nom ~' '~ user.prenom}}</h1>
+
+<div class="row justify-content-center">
+<div class="col card mb-3 " style="max-width: 800px; ">
+	<div class="row g-0">
+
+				<h3><strong>Nom:
+				</strong>
+				{{user.nom}}</h3>
+			<h3>
+				<strong>Prenom:
+				</strong>
+				{{user.prenom}}</h3>
+			<h3>
+				<strong>Date de naissance:
+				</strong>
+				{{user.dateDeNaissance |date('d-m-Y') }}</h3>
+			<h3>
+				<strong>Login:
+				</strong>
+				{{user.login}}</h3>
+                <h3>
+				<strong>Téléphone:
+				</strong>
+				{{user.telephone}}</h3>
+                <h3>
+				<strong>Adresse:
+				</strong>
+				{{user.adresse}}</h3>
+				<h3>
+				<strong>Email:
+				</strong>
+				{{user.email}}</h3>
+			<h3>
+                <h3>
+				<strong>Type de peau:
+				</strong>
+				{{user.peau}}</h3>
+		</div>
+
+	</div>
+	</div>
+</div>
+</div>
+<a class="btn btn-primary" href="{{path('admin_gestion_users')}}" role="button">Retour</a>
+
+
+
+
+
+
+	<div class="col-md-4 col-lg-4 col-sm-12"></div>
+
+{% endblock %}
+

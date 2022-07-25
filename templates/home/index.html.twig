@@ -1,0 +1,112 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+<h1 class="display-6 my-5 text-center text-primary" >BIENVENUE A L'INSTITUT DE LA PEAU</h1>
+
+
+
+
+
+
+
+
+<div class="row mt-2">
+
+
+<div class="col-md-2">
+<ul class="list-group">
+
+<a class="text-decoration-none" href="{{path('produits_categorie', {id:1})}}"><li class="list-group-item list-group-item-action list-group-item-warning text-center ">peau normale</li></a>
+<a class="text-decoration-none" href="{{path('produits_categorie', {id:2})}}"><li class="list-group-item list-group-item-action list-group-item-warning text-center ">peau sèche</li></a>
+<a class="text-decoration-none" href="{{path('produits_categorie', {id:3})}}"><li class="list-group-item list-group-item-action list-group-item-warning text-center ">peau mixte</li></a>
+<a class="text-decoration-none" href="{{path('produits_categorie', {id:4})}}"><li class="list-group-item list-group-item-action list-group-item-warning text-center ">peau acnéique</li></a>
+<a class="text-decoration-none" href="{{path('produits_categorie', {id:5})}}"><li class="list-group-item list-group-item-action list-group-item-warning text-center ">peau sensible</li></a>
+<a class="text-decoration-none" href="{{path('produits_categorie', {id:6})}}"><li class="list-group-item list-group-item-action list-group-item-warning text-center ">peau grasse</li></a>
+</ul>
+</div>
+</div>
+
+
+
+<div class="row justify-content-center">
+	<div class="col card mb-3 " style="max-width: 800px; top:-250px;">
+		<div class="row g-0">
+			<div class="col-md-6 justify-content-center">
+				
+			</div>
+			<div class="col-md-6">
+				<div class="card-body">
+				Nous vous souhaitons la bienvenue sur notre site dédié au traitement de tous les types de peau.<br>
+
+		Vous rencontrez des problèmes de sécheresse cutanés, de points noirs? Nous avons la solution.<br> Vous n'arrivez pas à contrôler la brillance? Vous trouverez un traitement adapté auprès de nous. <br>
+		Vous souhaitez simplement prendre soin et embellir votre peau ? Vous êtes à la bonne adresse. 
+		Quel est votre type de peau ? </div>
+
+
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div></div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+{# <main class="p-3 mb-2 bg-warning text-dark">
+
+<div class="d-flex justify-content-start">
+
+	<div class="nav flex-column nav-pills me-3 " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+		<button class="nav-link" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+		<button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Pour les peaux normales</button>
+		<button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Pour les peaux sensibles</button>
+		<button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Pour les peaux mixtes</button>
+		<button class="nav-link" id="v-pills-matiere-tab" data-bs-toggle="pill" data-bs-target="#v-pills-matiere" type="button" role="tab" aria-controls="v-pills-matiere" aria-selected="false">Pour les peaux grasses</button>
+		<button class="nav-link" id="v-pills-peau-tab" data-bs-toggle="pill" data-bs-target="#v-pills-peau" type="button" role="tab" aria-controls="v-pills-peau" aria-selected="false">Pour les peaux acnéiques</button>
+		<button class="nav-link" id="v-pills-eau-tab" data-bs-toggle="pill" data-bs-target="#v-pills-eau" type="button" role="tab" aria-controls="v-pills-eau" aria-selected="false">Pour les peaux grasses</button>
+	</div>
+<div class="tab-content justify-content-center" id="v-pills-tabContent">
+
+<div class="tab-pane fade show active " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">Nous vous souhaitons la bienvenue sur notre site dédié au traitement de tous les types de peau.<br>
+
+		Vous rencontrez des problèmes de sécheresse cutanés, de points noirs? Nous avons la solution.<br> Vous n'arrivez pas à contrôler la brillance, vous trouverez un traitement adapté auprès de nous. <br>
+		Vous souhaitez simplement prendre soin et embellir votre peau ? Vous êtes à la bonne adresse. 
+		Quel est votre type de peau ? </div>
+
+
+		
+		
+<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"><img src="01.jpg" alt="Girl in a jacket" width="500" height="600"></div>
+
+
+
+<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"></div>
+
+
+		<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">tu</div>
+		<div class="tab-pane fade" id="v-pills-matiere" role="tabpanel" aria-labelledby="v-pills-matiere-tab">vas</div>
+		<div class="tab-pane fade" id="v-pills-peau" role="tabpanel" aria-labelledby="v-pills-peau-tab">auj</div>
+		<div class="tab-pane fade" id="v-pills-eau" role="tabpanel" aria-labelledby="v-pills-eau-tab">??</div>
+	</div>
+</div>
+
+
+</main> #}
+
+
+
+

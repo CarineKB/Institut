@@ -1,0 +1,70 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+	gestion des utilisateurs
+{% endblock %}
+
+
+{% block content %}
+
+
+<a href="{{path("app_register")}}">
+
+		<button type="button" class="btn btn-success text-white">ajouter
+							un user</button>
+	</a>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Id</th>
+				<th scope="col">email</th>
+				<th scope="col">nom</th>
+				<th scope="col">prenom</th>
+				<th scope="col">date de naissance</th>
+				<th scope="col">login</th>
+				<th scope="col">telephone</th>
+                <th scope="col">adresse</th>
+				<th scope="col">type de peau</th>
+				{# <th scope="col">action</th> #}
+				{# <th scope="col">categorie</th> #}
+
+
+			</tr>
+		</thead>
+		<tbody>
+			{% for user in user %}
+
+
+				<tr>
+					<td>{{user.id}}</td>
+					<td>{{user.email}}</td>
+					<td>{{user.nom}}</td>
+					<td>{{user.prenom}}</td>
+					<td>{{user.dateDeNaissance |date('d-m-Y') }}</td>
+					<td>{{user.login}}</td>
+					<td>{{user.telephone}}</td>
+					<td>{{user.adresse}}</td>
+					<td>{{user.peau}}</td>
+					<td>
+						<a href="{{ path('admin_detail_user', {id: user.id})}}">affiche</a>
+						<a href="{{ path('admin_update_user', {id: user.id})}}">
+							mise à jour</a>
+						<a href="{{ path('admin_delete_user', {id: user.id})}}" onclick="return confirm('Etes-vous sûr de vouloir supprimer ce user ? ') ">
+							supprimer</a>
+					</td>
+					<td>
+						{# {% if user.categorie %}
+													{{  user.categorie.nom  }}
+												{% else %}
+													inconnu
+												{% endif %} #}
+					</td>
+
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock %}
+
