@@ -77,6 +77,8 @@ class CommandeController extends AbstractController
                            ->setPrix($sousTotal);
 
                            $repoDetail->add($commandeDetail);
+                           $commandeDetail->setProduit($produit);
+                           $produit->setStock($produit->getStock()-$quantite);
         }
        
             $manager->flush();
